@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# 💼 React Job Board Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A user-friendly job board built using **React**, allowing users to browse job listings, search by title or location, view detailed job descriptions, and manage favorite jobs using localStorage.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔍 **Job Search** – Search by job title or location in real time
+- 📄 **Job Listing Page** – Paginated job cards with sorting and skeleton loaders
+- 📝 **Job Details Page** – View full job information on a separate route
+- ⭐ **Favorite Jobs** – Mark/unmark jobs as favorites and view them in a separate tab
+- 🧭 **Sidebar Navigation** – Switch between job listings and favorites
+- 🍔 **Hamburger Menu** – Toggle sidebar on all devices
+- ⏳ **Skeleton Loading** – While data is being fetched
+- 📱 **Responsive Design** – Works seamlessly on mobile, tablet, and desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧰 Tech Stack
 
-### `npm test`
+- [React](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/)
+- [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton)
+- HTML, CSS (custom), and localStorage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Installation & Running Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/your-username/job-board-app.git
+cd job-board-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the development server**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> Open your browser at `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── components/
+│   ├── Sidebar.jsx
+│   ├── JobList.jsx
+│   ├── JobDetails.jsx
+│   ├── FavoriteJobs.jsx
+│   └── *.css (styles)
+├── mock/
+│   └── jobs.json
+├── App.js
+├── App.css
+└── index.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📚 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. **Job Listings**
+- Fetched from `/src/mock/jobs.json`
+- Filtered by a single search input (title or location)
+- Sorted by salary or title
+- Paginated (10 per page)
+- Shows skeleton loader during initial load
 
-### Analyzing the Bundle Size
+### 2. **Job Details**
+- Route: `/job/:id`
+- Shows complete job info
+- Styled layout with back navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. **Favorites**
+- Mark/unmark favorites with `localStorage` persistence
+- View all favorites on `/favorites` page
+- Remove favorites directly
+- Includes pagination and skeleton loading
+- Toast notification on remove
 
-### Making a Progressive Web App
+### 4. **Sidebar + Hamburger**
+- Always-visible hamburger
+- Toggle sidebar open/close
+- Mobile-friendly
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🛠 Customization Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Edit `jobs.json` to change data
+- Customize styles in `App.css` or component-level CSS
+- Add new routes or pages easily with React Router
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 Author
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Mohamed Samseed**  
+Frontend Developer (React)  
+📍 Cochin, India  
